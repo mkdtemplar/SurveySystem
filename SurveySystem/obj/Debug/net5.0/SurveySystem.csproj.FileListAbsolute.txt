@@ -63,7 +63,6 @@ C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\ref\SurveySystem.dll
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.pdb
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.genruntimeconfig.cache
-C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.csproj.CopyComplete
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\net5.0\Repository.dll
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\net5.0\Repository.pdb
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\net5.0\AutoMapper.dll
