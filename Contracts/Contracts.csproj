@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\midTerm.Data\midTerm.Data.csproj" />
+    <ProjectReference Include="..\midTerm.Data\midTerm.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1248,8 +1248,8 @@
     },
     "midTerm.Data/1.0.0": {
       "type": "project",
-      "path": "../../midTerm.Data/midTerm.Data.csproj",
-      "msbuildProject": "../../midTerm.Data/midTerm.Data.csproj"
+      "path": "../midTerm.Data/midTerm.Data.csproj",
+      "msbuildProject": "../midTerm.Data/midTerm.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {

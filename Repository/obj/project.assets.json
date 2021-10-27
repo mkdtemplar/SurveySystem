@@ -1248,8 +1248,8 @@
     },
     "midTerm.Data/1.0.0": {
       "type": "project",
-      "path": "../../midTerm.Data/midTerm.Data.csproj",
-      "msbuildProject": "../../midTerm.Data/midTerm.Data.csproj"
+      "path": "../midTerm.Data/midTerm.Data.csproj",
+      "msbuildProject": "../midTerm.Data/midTerm.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1291,11 +1291,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\sagit\\Desktop\\InternetServicesExam\\midTerm.Data\\midTerm.Data.csproj": {
-              "projectPath": "C:\\Users\\sagit\\Desktop\\InternetServicesExam\\midTerm.Data\\midTerm.Data.csproj"
-            },
             "C:\\Users\\sagit\\Desktop\\InternetServicesExam\\SurveySystem\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\sagit\\Desktop\\InternetServicesExam\\SurveySystem\\Contracts\\Contracts.csproj"
+            },
+            "C:\\Users\\sagit\\Desktop\\InternetServicesExam\\SurveySystem\\midTerm.Data\\midTerm.Data.csproj": {
+              "projectPath": "C:\\Users\\sagit\\Desktop\\InternetServicesExam\\SurveySystem\\midTerm.Data\\midTerm.Data.csproj"
             }
           }
         }
