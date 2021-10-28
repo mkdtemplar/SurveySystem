@@ -17,6 +17,8 @@ namespace SurveySystem
             CreateMap<Answers, AnswersDto>();
 
             CreateMap<SurveyUserCreationDto, SurveyUser>();
+
+            CreateMap<AnswersForCreationDto, Answers>();
         }
     }
 }

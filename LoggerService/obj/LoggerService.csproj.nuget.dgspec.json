@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[1.7.4, )"
@@ -123,6 +127,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             },
             "NLog.Extensions.Logging": {
               "target": "Package",
@@ -211,6 +219,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.11, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             },
             "NLog.Extensions.Logging": {
               "target": "Package",

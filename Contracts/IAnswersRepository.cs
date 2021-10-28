@@ -12,5 +12,7 @@ namespace Contracts
         IEnumerable<Answers> GetAllAnswers(int userId, bool trackChanges);
 
         Answers GetAnswer(int userId, int id, bool trackChanges);
+
+        void CreateAnswerForSurveyUser(int userId, Answers answers);
     }
 }

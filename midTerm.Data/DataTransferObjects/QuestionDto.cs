@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using midTerm.Data.Entities;
 
 namespace midTerm.Data.DataTransferObjects
 {
-    public class AnswersDto
+    public class QuestionDto
     {
         public int Id { get; set; }
-        
+        public string Text { get; set; }
+        public string Description { get; set; }
 
-        public ICollection<OptionDto>  Option { get; set; }
-
-        public SurveyUser User { get; set; }
+        public virtual ICollection<OptionDto> Options { get; set; }
     }
 }

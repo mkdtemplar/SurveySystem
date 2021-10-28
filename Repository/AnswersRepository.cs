@@ -20,5 +20,11 @@ namespace Repository
 
         public Answers GetAnswer(int userId, int id, bool trackChanges) =>
             FindByCondition(a => a.UserId.Equals(userId) && a.Id.Equals(id), trackChanges).SingleOrDefault();
+
+        public void CreateAnswerForSurveyUser(int userId, Answers answers)
+        {
+            answers.UserId = userId;
+            Create(answers);
+        }
     }
 }

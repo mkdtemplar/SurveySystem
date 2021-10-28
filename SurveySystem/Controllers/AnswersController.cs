@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
 using midTerm.Data.DataTransferObjects;
+using midTerm.Data.Entities;
 
 namespace SurveySystem.Controllers
 {
@@ -37,26 +38,53 @@ namespace SurveySystem.Controllers
             return Ok(answersDto);
         }
 
-        [HttpGet("{Id}")]
-        public IActionResult GetAnswerForUser(int userId, int id)
+        [HttpGet("{Id}", Name = "GetAnswerForUser")]
+        public IActionResult GetAnswerForUser(int Id, int answersid)
         {
-            var surveyUser = _repository.SurveyUsers.GetSingleSurveyUser(userId, trackChanges: false);
+            var surveyUser = _repository.SurveyUsers.GetSingleSurveyUser(Id, trackChanges: false);
             if (surveyUser == null)
             {
-                _logger.LogInfo($"User with id: {userId} not exists.");
+                _logger.LogInfo($"User with id: {Id} not exists.");
                 return NotFound();
             }
 
-            var answerDb = _repository.Answers.GetAnswer(userId, id, trackChanges: false);
+            var answerDb = _repository.Answers.GetAnswer(Id, answersid, trackChanges: false);
             if (answerDb == null)
             {
-                _logger.LogInfo($"Answer with id: {id} not exists.");
+                _logger.LogInfo($"Answer with id: {answersid} not exists.");
                 return NotFound();
             }
 
             var answer = _mapper.Map<AnswersDto>(answerDb);
 
             return Ok(answer);
+        }
+
+        [HttpPost]
+        public IActionResult CreateAnswerForSurveyUser(int userId, [FromBody] AnswersForCreationDto answers)
+        {
+            if (answers == null)
+            {
+                _logger.LogError("Object sent from client is null.");
+                return BadRequest("Object sent from client is null.");
+            }
+
+            var surveyUser = _repository.SurveyUsers.GetSingleSurveyUser(userId, trackChanges: false);
+            if (surveyUser == null)
+            {
+                _logger.LogInfo($"Survey user with id: {userId} not exists.");
+                return NotFound();
+            }
+
+            var answerEntity = _mapper.Map<Answers>(answers);
+
+            _repository.Answers.CreateAnswerForSurveyUser(userId, answerEntity);
+            _repository.Save();
+
+            var answerToReturn = _mapper.Map<AnswersDto>(answerEntity);
+
+            return CreatedAtRoute("GetAnswerForUser", new { userId, id = answerToReturn.Id, answerEntity.OptionId },
+                answerToReturn);
         }
     }
 }

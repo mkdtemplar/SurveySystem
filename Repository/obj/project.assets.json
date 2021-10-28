@@ -429,6 +429,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "NLog.Extensions.Logging": "1.7.4",
           "midTerm.Data": "1.0.0"
         },
@@ -446,6 +447,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.11",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "NLog.Extensions.Logging": "1.7.4",
           "System.ComponentModel.Annotations": "5.0.0"
         },
@@ -1256,6 +1258,7 @@
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Contracts >= 1.0.0",
+      "Microsoft.Extensions.DependencyInjection >= 5.0.2",
       "midTerm.Data >= 1.0.0"
     ]
   },
@@ -1313,6 +1316,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[8.1.1, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[5.0.2, )"
           }
         },
         "imports": [

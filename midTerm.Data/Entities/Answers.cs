@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace midTerm.Data.Entities
 {
@@ -9,7 +10,7 @@ namespace midTerm.Data.Entities
         public int OptionId { get; set; }
 
         [ForeignKey("OptionId")]
-        public virtual Option Option { get; set; }
+        public ICollection<Option>  Option { get; set; }
 
         [ForeignKey("UserId")]
         public  SurveyUser User { get; set; }
