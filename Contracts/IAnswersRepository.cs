@@ -10,5 +10,7 @@ namespace Contracts
     public interface IAnswersRepository
     {
         IEnumerable<Answers> GetAllAnswers(int userId, bool trackChanges);
+
+        Answers GetAnswer(int userId, int id, bool trackChanges);
     }
 }

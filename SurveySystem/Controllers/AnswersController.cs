@@ -36,5 +36,27 @@ namespace SurveySystem.Controllers
 
             return Ok(answersDto);
         }
+
+        [HttpGet("{Id}")]
+        public IActionResult GetAnswerForUser(int userId, int id)
+        {
+            var surveyUser = _repository.SurveyUsers.GetSingleSurveyUser(userId, trackChanges: false);
+            if (surveyUser == null)
+            {
+                _logger.LogInfo($"User with id: {userId} not exists.");
+                return NotFound();
+            }
+
+            var answerDb = _repository.Answers.GetAnswer(userId, id, trackChanges: false);
+            if (answerDb == null)
+            {
+                _logger.LogInfo($"Answer with id: {id} not exists.");
+                return NotFound();
+            }
+
+            var answer = _mapper.Map<AnswersDto>(answerDb);
+
+            return Ok(answer);
+        }
     }
 }

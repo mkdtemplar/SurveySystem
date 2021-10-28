@@ -17,5 +17,8 @@ namespace Repository
 
         public IEnumerable<Answers> GetAllAnswers(int userId, bool trackChanges) =>
             FindByCondition(s => s.UserId.Equals(userId), trackChanges);
+
+        public Answers GetAnswer(int userId, int id, bool trackChanges) =>
+            FindByCondition(a => a.UserId.Equals(userId) && a.Id.Equals(id), trackChanges).SingleOrDefault();
     }
 }

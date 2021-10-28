@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
 using midTerm.Data.DataTransferObjects;
+using midTerm.Data.Entities;
 
 namespace SurveySystem.Controllers
 {
@@ -33,7 +34,7 @@ namespace SurveySystem.Controllers
             return Ok(surveyUsersDto);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetSurveyUserById")]
         public IActionResult GetSingleSurveyUser(int id)
         {
             var surveyUser = _repository.SurveyUsers.GetSingleSurveyUser(id, trackChanges: false);
@@ -46,6 +47,25 @@ namespace SurveySystem.Controllers
 
             var surveyUserDto = _mapper.Map<SurveyUserDto>(surveyUser);
             return Ok(surveyUserDto);
+        }
+
+        [HttpPost]
+        public IActionResult CreateSurveyUser([FromBody] SurveyUserCreationDto surveyUser)
+        {
+            if (surveyUser == null)
+            {
+                _logger.LogError("Object sent from client is null.");
+                return BadRequest("Object sent from client is null.");
+            }
+
+            var surveyUserEntity = _mapper.Map<SurveyUser>(surveyUser);
+
+            _repository.SurveyUsers.CreateSurveyUser(surveyUserEntity);
+            _repository.Save();
+
+            var surveyUserToReturn = _mapper.Map<SurveyUserDto>(surveyUserEntity);
+
+            return CreatedAtRoute("GetSurveyUserById", new { id = surveyUserToReturn.Id }, surveyUserToReturn);
         }
     }
 }

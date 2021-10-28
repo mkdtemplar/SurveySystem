@@ -12,5 +12,7 @@ namespace Contracts
         IEnumerable<SurveyUser> GetAllSurveyUsers(bool trackChanges);
 
         SurveyUser GetSingleSurveyUser(int id, bool trackChanges);
+
+        void CreateSurveyUser(SurveyUser surveyUser);
     }
 }

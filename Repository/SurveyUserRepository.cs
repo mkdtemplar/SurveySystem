@@ -21,5 +21,7 @@ namespace Repository
 
         public SurveyUser GetSingleSurveyUser(int id, bool trackChanges) =>
             FindByCondition(s => s.Id.Equals(id), trackChanges).Include(a => a.AnswersCollection).SingleOrDefault();
+
+        public void CreateSurveyUser(SurveyUser surveyUser) => Create(surveyUser);
     }
 }
