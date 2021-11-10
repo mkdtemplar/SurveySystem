@@ -7,6 +7,6 @@ namespace midTerm.Data.DataTransferObjects
 {
     public class AnswersForCreationDto
     {
-        public Option Option { get; set; }
+        public ICollection<OptionDto> Option { get; set; }
     }
 }

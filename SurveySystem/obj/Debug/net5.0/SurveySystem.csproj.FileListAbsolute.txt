@@ -56,7 +56,6 @@ C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\staticwebassets\SurveySystem.StaticWebAssets.Manifest.cache
-C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\staticwebassets\SurveySystem.StaticWebAssets.xml
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\scopedcss\bundle\SurveySystem.styles.css
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.RazorTargetAssemblyInfo.cache
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.dll
@@ -68,3 +67,4 @@ C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\obj\Debug\net5.0\SurveySystem.csproj.CopyComplete
+C:\Users\sagit\Desktop\InternetServicesExam\SurveySystem\SurveySystem\bin\Debug\net5.0\SurveySystem.StaticWebAssets.xml
